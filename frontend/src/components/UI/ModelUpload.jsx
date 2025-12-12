@@ -126,7 +126,7 @@ const ModelUpload = ({ onUpload, isLoading }) => {
           </div>
         ) : (
           <>
-            <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-primary-100 to-primary-50 rounded-full flex items-center justify-center">
+            <div className="w-20 h-20 mx-auto mb-4 bg-linear-to-br from-primary-100 to-primary-50 rounded-full flex items-center justify-center">
               {isDragActive ? (
                 <Upload className="w-10 h-10 text-primary-500 animate-bounce" />
               ) : (
@@ -147,11 +147,11 @@ const ModelUpload = ({ onUpload, isLoading }) => {
             
             <div className="mt-8 space-y-3">
               <div className="flex items-center justify-center text-sm">
-                <CheckCircle className="w-4 h-4 mr-2 text-green-500 flex-shrink-0" />
+                <CheckCircle className="w-4 h-4 mr-2 text-green-500 shrink-0" />
                 <span className="text-gray-600">Supported formats: .GLB, .GLTF</span>
               </div>
               <div className="flex items-center justify-center text-sm">
-                <AlertCircle className="w-4 h-4 mr-2 text-yellow-500 flex-shrink-0" />
+                <AlertCircle className="w-4 h-4 mr-2 text-yellow-500 shrink-0" />
                 <span className="text-gray-600">Maximum file size: 50MB</span>
               </div>
             </div>
@@ -161,7 +161,7 @@ const ModelUpload = ({ onUpload, isLoading }) => {
 
       {uploadError && (
         <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg flex items-start">
-          <XCircle className="w-5 h-5 text-red-500 mr-2 flex-shrink-0 mt-0.5" />
+          <XCircle className="w-5 h-5 text-red-500 mr-2 shrink-0 mt-0.5" />
           <p className="text-red-700 text-sm">{uploadError}</p>
         </div>
       )}
